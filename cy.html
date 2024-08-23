@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Money</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f8ff;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .confession {
+            display: none;
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #e74c3c;
+        }
+        button {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+        }
+        button:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>!!Free Money!!</h1>
+		
+        <p>Do You Need Money?</p>
+        <button onclick="revealConfession()">click for money</button>
+        <p class="confession">you're so pretty like fr no cap, ay btw cy nga pala</p>
+
+    </div>
+
+    <script>
+        function revealConfession() {
+            document.querySelector('.confession').style.display = 'block';
+        }
+    </script>
+</body>
+</html>
