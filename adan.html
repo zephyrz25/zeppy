@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MovieScreens</title>
+  <link rel="stylesheet" href="adan.css" />
+</head>
+<body>
+ <header class="site-header"> 
+  <div class="container"> 
+    <h1 class="site-title">67 Movies</h1> 
+    
+    <div class="header-right-nav">
+      
+      <button id="loginBtn" class="btn login-btn" onclick="openModal('login')">
+        Login
+      </button>
+      
+      <div id="profileMenu" class="profile-menu" style="display:none;">
+        <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png"
+              alt="Profile"
+              onclick="toggleProfileDropdown()"
+              class="profile-icon">
+        
+        <div id="profileDropdown" class="profile-dropdown">
+          <span id="profileName" style="padding: 5px 0; border-bottom: 1px solid #333; margin-bottom: 5px; font-weight: bold;"></span>
+          <button onclick="openListModal()">My List</button>
+          <button onclick="openHistory()">Watch History</button>
+          <button onclick="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </div> 
+</header>
+
+  <main class="container">
+    <div class="search-bar">
+      <input
+        type="text"
+        id="search"
+        placeholder="Search for a movie..."
+        onkeyup="searchMovies()"
+      />
+    </div>
+
+   <section class="screenshots-grid" id="movieList">
+
+  <div class="screenshot-card"
+    data-title="Avengers"
+    data-year="2012"
+    data-genre="Action • Superhero"
+    data-desc="Earth's mightiest heroes must come together to stop Loki and his army."
+    data-trailer="https://youtu.be/bLer55y58u8">
+    <img src="avengers.jpg" alt="Avengers" />
+    <h2>Avengers</h2>
+  </div>
+
+  <div class="screenshot-card"
+    data-title="Iron Man"
+    data-year="2008"
+    data-genre="Action • Sci-Fi"
+    data-desc="Tony Stark builds a powerful suit to fight evil after surviving a kidnapping."
+    data-trailer="https://youtu.be/8ugaeA-nMTc">
+    <img src="ironman.jpg" alt="Iron Man" />
+    <h2>Iron Man</h2>
+  </div>
+
+  <div class="screenshot-card"
+    data-title="Black Panther"
+    data-year="2018"
+    data-genre="Action • Sci-Fi"
+    data-desc="T'Challa returns home to claim his rightful place as king of Wakanda."
+    data-trailer="https://www.youtube.com/embed/xjDjIWPwcPU">
+    <img src="blackpanther.jpg" alt="Black Panther" />
+    <h2>Black Panther</h2>
+  </div>
+
+  <div class="screenshot-card"
+    data-title="Spider-Man"
+    data-year="2021"
+    data-genre="Action • Superhero"
+    data-desc="Spider-Man faces multiversal threats in his biggest challenge yet."
+    data-trailer="https://www.youtube.com/embed/rt-2cxAiPJk">
+    <img src="spiderman.jpg" alt="Spider-Man" />
+    <h2>Spider-Man</h2>
+  </div>
+
+  <div class="screenshot-card"
+    data-title="Thor"
+    data-year="2011"
+    data-genre="Action • Mythology"
+    data-desc="Thor must prove himself worthy after being banished from Asgard."
+    data-trailer="https://www.youtube.com/embed/JOddp-nlNvQ">
+    <img src="thor.jpg" alt="Thor" />
+    <h2>Thor</h2>
+  </div>
+
+  <div class="screenshot-card"
+    data-title="Doctor Strange"
+    data-year="2016"
+    data-genre="Action • Fantasy"
+    data-desc="A brilliant surgeon discovers the mystic arts after a tragic accident."
+    data-trailer="https://www.youtube.com/embed/HSzx-zryEgM">
+    <img src="doctorstrange.jpg" alt="Doctor Strange" />
+    <h2>Doctor Strange</h2>
+  </div>
+
+  <div class="screenshot-card"
+    data-title="Captain America"
+    data-year="2011"
+    data-genre="Action • War"
+    data-desc="Steve Rogers becomes Captain America to fight HYDRA."
+    data-trailer="https://www.youtube.com/embed/JerVrbLldXw">
+    <img src="captainamerica.jpg" alt="Captain America" />
+    <h2>Captain America</h2>
+  </div>
+
+  <div class="screenshot-card"
+    data-title="Hulk"
+    data-year="2008"
+    data-genre="Action • Sci-Fi"
+    data-desc="Bruce Banner becomes the Hulk after a gamma radiation accident."
+    data-trailer="https://www.youtube.com/embed/xbqNb2PFKKA">
+    <img src="hulk.jpg" alt="Hulk" />
+    <h2>Hulk</h2>
+  </div>
+
+  <div class="screenshot-card"
+    data-title="Deadpool and Wolverine"
+    data-year="2024"
+    data-genre="Action • Comedy"
+    data-desc="The merc with a mouth teams up with Wolverine for a chaotic adventure."
+    data-trailer="https://www.youtube.com/embed/Idh8n5XuYIA">
+    <img src="deadpool.jpg" alt="DeadPool" />
+    <h2>DeadPool and Wolverine</h2>
+  </div>
+
+  <div class="screenshot-card"
+    data-title="Shang-Chi"
+    data-year="2021"
+    data-genre="Action • Fantasy"
+    data-desc="A martial arts master confronts the mysterious Ten Rings."
+    data-trailer="https://www.youtube.com/embed/giWIr7U1deA">
+    <img src="shangchi.jpg" alt="Shang-Chi" />
+    <h2>Shang-Chi</h2>
+  </div>
+
+  <div class="screenshot-card"
+    data-title="Fantastic Four"
+    data-year="2015"
+    data-genre="Action • Sci-Fi"
+    data-desc="Four young outsiders teleport to an alternate universe, gaining powers."
+    data-trailer="https://www.youtube.com/embed/_rRoD28-WgU">
+    <img src="fantastic four.jpg" alt="Fantastic Four" />
+    <h2>Fantastic Four</h2>
+  </div>
+
+  <div class="screenshot-card"
+    data-title="Guardians of the Galaxy"
+    data-year="2014"
+    data-genre="Action • Comedy"
+    data-desc="A group of intergalactic criminals band together to save the universe."
+    data-trailer="https://www.youtube.com/embed/d96cjJhvlMA">
+    <img src="gotg.jpg" alt="Gotg" />
+    <h2>Guardians of The Galaxy</h2>
+  </div>
+
+</section>
+    <div id="movieDetailModal" class="movie-modal">
+  <div class="movie-modal-content">
+    <span class="close-detail" onclick="closeMovieDetail()">&times;</span>
+    <div class="movie-detail-banner">
+     <div class="trailer">
+  <iframe 
+    id="movieTrailer"
+    width="100%" 
+    height="100%"
+    src=""
+    title="Movie Trailer"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen>
+  </iframe>
+</div>
+      <div class="movie-overlay"></div>
+      <div class="movie-detail-info">
+        <h1 id="detailTitle"></h1>
+        <p id="detailYearGenre"></p>
+        <div class="movie-actions">
+          <button class="btn watch-btn" id="watchNowBtn">▶ Watch Now</button>
+          <button class="btn play-btn">▶ Play Trailer</button>
+          <button class="btn add-btn" onclick="addToList()">+ My List</button>
+        </div>
+        <p id="detailDesc"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </main>
+
+  <div id="authModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal()">&times;</span>
+      <div id="loginForm">
+        <h2>Login</h2>
+        <input type="text" placeholder="Username" />
+        <input type="password" placeholder="Password" />
+      <button class="btn submit-btn" onclick="finishLogin()">Login</button>
+        <p>
+          Don't have an account?
+          <a href="#" onclick="switchForm('signup')">Sign up</a>
+        </p>
+      </div>
+      <div id="signupForm" style="display: none;">
+        <h2>Sign Up</h2>
+        <input type="text" placeholder="Username" />
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <input type="password" placeholder="Confirm Password" />
+        <button class="btn submit-btn" onclick="finishSignup()">Sign Up</button>
+        <p>
+          Already have an account?
+          <a href="#" onclick="switchForm('login')">Login</a>
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <div id="myListModal" class="modal">
+    <div class="list-modal-content">
+      <span class="close" onclick="closeListModal()">&times;</span>
+      <h2>My List</h2>
+      <div id="myListContainer" class="list-grid">
+        </div>
+    </div>
+  </div>
+
+  <div id="historyModal" class="modal">
+    <div class="list-modal-content">
+      <span class="close" onclick="closeHistoryModal()">&times;</span>
+      <h2>Watch History</h2>
+      <div id="historyContainer" class="list-grid">
+      </div>
+    </div>
+  </div>
+
+  <div id="fullMovieModal" class="modal full-movie-modal">
+    <div class="full-player-content">
+      <span class="close-detail" onclick="closeFullMoviePlayer()">&times;</span>
+      <h2 id="playerMovieTitle"></h2>
+
+      <div class="server-selection" id="serverSelection">
+        </div>
+      
+      <div class="movie-player-container">
+        <video id="fullMovieVideo" width="100%" height="100%" controls autoplay></video>
+      </div>
+
+      <div class="player-controls">
+          <div class="controls-left">
+              <button onclick="document.getElementById('fullMovieVideo').play()" style="display:none;">▶</button>
+              <button onclick="document.getElementById('fullMovieVideo').pause()" style="display:none;">⏸</button>
+              <input type="range" id="volumeSlider" min="0" max="1" step="0.01" value="1" onchange="changeVolume(this.value)" />
+          </div>
+          <div class="controls-center">
+              <button onclick="skipBackward()">⏪ 10s</button>
+              <button onclick="skipForward()">⏩ 10s</button>
+          </div>
+          <div class="controls-right">
+              <button onclick="toggleFullscreen()">🗖 Fullscreen</button>
+          </div>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="adan.js"></script>
+</body>
+</html>
